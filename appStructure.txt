@@ -1,0 +1,22 @@
+src
+----app
+    ---user
+    ---user.component.ts|.html|.css
+        ---registration
+           --registration.component.ts|.html|.css
+        ---login
+            ---login.component.ts|.html|
+
+    --home
+        --home.component.ts|.html| 
+        
+    --auth
+        --auth.guard.ts  
+        --auth.interceptor.ts      
+
+       ---shared
+          --user.service.ts
+          
+    --app.module.ts
+    --app-routing.module.ts (route config.)
+--index.html (cdn path for bootstap) 

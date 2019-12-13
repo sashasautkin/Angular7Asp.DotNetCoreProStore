@@ -8,6 +8,7 @@ import { AuthGuard } from './auth/auth.guard';
 import { ItemComponent } from './user/item/item.component';
 import { CreateitemComponent } from './user/createitem/createitem.component';
 import { ShoppingbagComponent } from './user/shoppingbag/shoppingbag.component';
+import { YouritemComponent } from './user/youritem/youritem.component';
 
 
 const routes: Routes = [
@@ -19,11 +20,12 @@ const routes: Routes = [
     {path: 'login', component: LoginComponent }
     ]
   },
-  {path:'home', component:HomeComponent , 
+  {path:'home',  component:HomeComponent , 
   children:[
   {path: 'item' , component: ItemComponent},
   {path: 'createitem' , component: CreateitemComponent},
-  {path: 'shoppingbag' , component: ShoppingbagComponent}
+  {path: 'shoppingbag' , component: ShoppingbagComponent},
+  {path: 'youritem' , component: YouritemComponent}
 ], canActivate:[AuthGuard] }
 
 ];

@@ -1,0 +1,20 @@
+<div *ngIf="userDetails">
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="tab-header">
+            <img src="/assets/img/homeuser.png" >
+            <label class="labelUserName"><strong>UserName: {{userDetails.userName}}</strong></label>
+            <h2 class="div-Item" routerLink='/home/item' routerLinkActive='active'>Items</h2>
+            <h2 class="div-Item" routerLink='/home/createitem' routerLinkActive='active'>Create New Item</h2>
+            <h2 class="div-Item" routerLink='/home/shoppingbag' routerLinkActive='active'>Shopping Bag</h2>
+            <h2 class="div-Item" routerLink='/home/youritem' routerLinkActive='active'>Your Item</h2>
+        
+        </div>
+        <button class="btn btn-danger my-2 my-sm-0" style="background-color: rgb(246, 15, 15);" (click)="onLogout()">LoginOut</button>
+    </nav>
+    
+    <div class="row">
+            <div class="col-md-9 offset-md-0" style="padding-top: 10px; padding-left:20%; "> 
+                    <router-outlet> </router-outlet>
+            </div>
+    </div>
+</div>

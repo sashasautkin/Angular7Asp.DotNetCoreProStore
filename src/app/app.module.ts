@@ -15,6 +15,7 @@ import { AuthInterceptor } from './auth/auth.interceptor';
 import { ItemComponent } from './user/item/item.component';
 import { CreateitemComponent } from './user/createitem/createitem.component';
 import { ShoppingbagComponent } from './user/shoppingbag/shoppingbag.component';
+import { YouritemComponent } from './user/youritem/youritem.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ShoppingbagComponent } from './user/shoppingbag/shoppingbag.component';
     HomeComponent,
     ItemComponent,
     CreateitemComponent,
-    ShoppingbagComponent
+    ShoppingbagComponent,
+    YouritemComponent
   ],
   imports: [
     BrowserModule,

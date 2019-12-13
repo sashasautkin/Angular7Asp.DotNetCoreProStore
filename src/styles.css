@@ -4,6 +4,7 @@ body{
 .labelUserName{
     color: rgb(255, 255, 255);
     font-size: 20px;
+    padding: 10px;
 
 }
 
@@ -31,7 +32,7 @@ button[type=submit].btn{
 }
 
 div.form-group label:not(.text-danger){
-    color: #c7c3c3;
+    color: #000000;
     font-weight: 700;
 }
 
@@ -49,6 +50,20 @@ div.form-group.required>label:first-child:after{
     
     background: #ffffff;
     padding: 30px;
+    height: 500px;
+    width: 200%;
+    max-width: 800px;
+    position: relative;
+    padding: 0px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+}
+.div-createitem-top{
+    
+    
+    background: #ffffff;
+    padding: 30px;
+    height: 300px;
     width: 200%;
     max-width: 800px;
     position: relative;

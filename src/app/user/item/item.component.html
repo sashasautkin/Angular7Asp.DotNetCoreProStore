@@ -1,0 +1,31 @@
+<div class="div-item-top"  >
+        <div>
+        <div class="div-item">
+                <div>
+                <h1 style="padding: 20px;">AllProduct</h1>
+                <Div style="padding: 20px;">
+                <table *ngIf="tableMode; else create" class="table table-striped">
+                        <thead>
+                                <tr style="background: rgb(255, 251, 0);">
+                                        <td>UserName</td>
+                                        <td>ProductName</td>
+                                        <td>Price</td>
+                                        <td> </td>
+                                </tr>
+                        </thead>
+                        <tbody>
+                                <tr *ngFor="let p of products">
+                                <ng-template [ngIf]="product?.id != p.id" >
+                                        <td>{{p?.userName}}</td>
+                                        <td>{{p?.productName}}</td>
+                                        <td>{{p?.price}}</td>
+                                </ng-template>                                                  
+                                </tr>
+                        </tbody>
+                </table> 
+                </Div> 
+                </div>              
+            
+        </div>
+</div>
+</div>
