@@ -1,6 +1,38 @@
-<div class="div-item-top"  >
-    <strong style="font-family: Arial, Helvetica, sans-serif, Times, serif; font-size: 30px; padding: 10px;">That page is your own item  </strong>
-    <div class="div-item">
+<div class="div-shoppingbag-top"  >
+    <div>
+    <div class="div-shoppingbag">
+            <div>
+            <h1 style="padding: 20px;">Users</h1>
+            <Div style="padding: 20px;">
+                    <table *ngIf="tableMode; else create" class="table table-striped">
+                            <thead>
+                                <tr style="background: rgb(255, 251, 0);">
+                                    
+                                    <td>User id</td>
+                                    <td>User name</td>
+                                    
+                                    
+                                    <td></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let p of users">
+                                    <ng-template [ngIf]="user?.id != p.id"   >
+                                        
+                                        <td>{{p?.id}}</td>
+                                        <td>{{p?.userName}}</td>
+                                        
+                                        
+                                        <td>
+                                            <button class="btn btn-sm btn-danger " (click)="delete(p)">Delete</button>
+                                        </td>
+                                    </ng-template>
+                                </tr>
+                            </tbody>
+                        </table>
+            </Div> 
+            </div>              
         
     </div>
+</div>
 </div>

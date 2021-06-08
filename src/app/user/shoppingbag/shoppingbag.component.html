@@ -1,6 +1,40 @@
-<div class="div-item-top"  >
-    <strong style="padding: 10px;font-family: Arial, Helvetica, sans-serif, Times, serif; font-size: 30px;">That's Shopping Bag</strong>
-    <div class="div-item">
-        
+<div class="div-shoppingbag-top"  >
+        <div>
+        <div class="div-shoppingbag">
+                <div>
+                <h1 style="padding: 20px;">AllProduct</h1>
+                <Div style="padding: 20px;">
+                        <table *ngIf="tableMode; else create" class="table table-striped">
+                                <thead>
+                                    <tr style="background: rgb(255, 251, 0);">
+                                        
+                                        <td>User</td>
+                                        <td>Product name</td>
+                                        <td>customerName</td>
+                                        <td>Price</td>
+                                        <td>Currency</td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let p of bagproducts">
+                                        <ng-template [ngIf]="bagproduct?.id != p.id" [ngIfElse]="edit"  >
+                                            
+                                            <td>{{p?.userName}}</td>
+                                            <td>{{p?.productName}}</td>
+                                            <td>{{p?.customerName}}</td>
+                                            <td>{{p?.price}}</td>
+                                            <td>$</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-danger " (click)="delete(p)">Удалить</button>
+                                            </td>
+                                        </ng-template>
+                                    </tr>
+                                </tbody>
+                            </table>
+                </Div> 
+                </div>              
+            
+        </div>
     </div>
 </div>

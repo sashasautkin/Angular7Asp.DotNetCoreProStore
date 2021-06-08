@@ -8,7 +8,6 @@ body{
 
 }
 
-
 input.form-control,input.form-control:focus{
     background-color: #636b7b;
     color: #fff;
@@ -25,10 +24,11 @@ button[type=submit].btn{
     background-color: #fdec00;
     color: black;
 }
-.div-Item{
+.div-Item  {
     font-size: 30px;
     color: rgb(255, 255, 255);
-
+    height: 100%;
+    max-width: 100%
 }
 
 div.form-group label:not(.text-danger){
@@ -41,35 +41,56 @@ div.form-group.required>label:first-child:after{
     color: red;
     padding-left: 5px;
 }
+div.rows{
+    width: 1000px;
+}
 
 #toast-container > div {
     opacity:1;
 }
-.div-item-top{
-    
-    
+.div-item-top {
+        
     background: #ffffff;
     padding: 30px;
-    height: 500px;
+    min-width:  500px;
+    max-height: 100%;
     width: 200%;
-    max-width: 800px;
+    max-width: 100%;
     position: relative;
     padding: 0px;
     -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
     box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
 }
-.div-createitem-top{
-    
-    
+
+
+.div-shoppingbag, .div-createitem{
     background: #ffffff;
     padding: 30px;
-    height: 300px;
+    min-height: 500px;
     width: 200%;
-    max-width: 800px;
+    height: 100%;
+    
+    max-width: 100%;
     position: relative;
     padding: 0px;
     -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
     box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+}
+.div-shoppingbag-top, .div-createitem-top{
+    background: #ffffff;
+    padding: 30px;
+    height: 100%;
+    width: 200%;
+    min-width: 500px;
+    max-width: 100%;
+    position: relative;
+    padding: 0px;
+    
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+}
+.createitem {
+    padding:30px ;
 }
 
 .wrapper {

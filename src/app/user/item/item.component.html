@@ -10,7 +10,8 @@
                                         <td>UserName</td>
                                         <td>ProductName</td>
                                         <td>Price</td>
-                                        <td> </td>
+                                        <td>Currency</td>
+                                        <td></td>
                                 </tr>
                         </thead>
                         <tbody>
@@ -19,6 +20,12 @@
                                         <td>{{p?.userName}}</td>
                                         <td>{{p?.productName}}</td>
                                         <td>{{p?.price}}</td>
+                                        <td>$</td>
+                                        <td>
+                                        <button class="btn btn-sm btn-primary" (click)="BuyProduct(p)">Buy</button>
+                                        <button itemid="admindelete" class="btn btn-sm btn-danger "  (click)="delete(p)">Delete</button>
+                                        
+                                        </td>
                                 </ng-template>                                                  
                                 </tr>
                         </tbody>

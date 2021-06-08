@@ -16,6 +16,7 @@ import { ItemComponent } from './user/item/item.component';
 import { CreateitemComponent } from './user/createitem/createitem.component';
 import { ShoppingbagComponent } from './user/shoppingbag/shoppingbag.component';
 import { YouritemComponent } from './user/youritem/youritem.component';
+import {globals} from './shared/globals'
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { YouritemComponent } from './user/youritem/youritem.component';
     }),
     FormsModule
   ],
-  providers: [UserService,{
+  providers: [UserService,HomeComponent,{
   provide: HTTP_INTERCEPTORS,
   useClass: AuthInterceptor,
   multi: true  

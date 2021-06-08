@@ -1,22 +1,60 @@
- <div class="div-createitem-top">
-<form [formGroup]="service.formModel" autocomplete="off" (submit)="onSubmit()">
-        <strong style="padding: 10px;font-family: Arial, Helvetica, sans-serif, Times, serif; font-size: 30px;">Create new item</strong>
-   
-    <div class="form-group">
-        <label>Product Name</label>
-        <input class="form-control" formControlName="ProductName">
-     </div>
-    <div class="form-group">
-        <label >Price</label>
-        <input class="form-control" formControlName="Price">
-        </div>
+<div  class="div-createitem-top"  >
     
-    <div class="form-row">
-        <div class="form-group col-md-8 offset-md-2">
-            <button type="submit" class="btn btn-lg btn-block" >Add Item</button>
-        </div> 
-    </div>
-</form>
-</div>              
-
+    <div>
+    <div class="div-createitem">
+    <div class="createitem">
+        <h1>Products: {{userDetail.userName}} </h1>
+              
+        <input type="button" value="add" class="btn btn-default" (click)="add()" />
+        <input type="button" value="cancel" class="btn btn-default" (click)="cancel()" />
+        <table *ngIf="tableMode; else create" class="table table-striped">
+            <thead>
+                <tr style="background: rgb(255, 251, 0);">
+                     
+                    <td>User</td>
+                    <td>Product name</td>
+                    <td>Price</td>
+                    <td>Currency</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of creproducts">
+                    <ng-template [ngIf]="createitem?.id != p.id" [ngIfElse]="create"  >
+                        
+                        <td>{{p?.userName}}</td>
+                        <td>{{p?.productName}}</td>
+                        <td>{{p?.price}}</td>
+                        <td>$</td>
+                        <td> 
+                            <button class="btn btn-sm btn-primary "   (click)="editProduct(p)">Change</button>
+                            <button class="btn btn-sm btn-danger " (click)="delete(p)">Delete</button>
+                        </td>
+                    </ng-template>
+                </tr>
+            </tbody>
+        </table>
+         
         
+        
+         
+        <!--шаблон для добавления-->
+        <ng-template #create>
+            
+            <div class="form-group">
+                <label>Product name</label>
+                <input type="text" [(ngModel)]="creproduct.ProductName" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Price</label>
+                <input type="number" [(ngModel)]="creproduct.price" class="form-control" />
+            </div>
+            <div>
+                <input type="button" value="save" (click)="save()" class="btn btn-success" />
+                <input type="button" value="cancel" (click)="cancel()" class="btn btn-warning" />
+            </div>
+        </ng-template>
+    </div>
+</div>
+</div>
+</div>
